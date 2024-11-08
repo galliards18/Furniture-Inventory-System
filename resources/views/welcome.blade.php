@@ -7,6 +7,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon/NSB.png" />
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
@@ -32,10 +33,16 @@
             @endif
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
                 <div class="flex justify-center">
                     
                 </div>
                 <h1 class="text-xl font-semibold text-gray-900">Welcome to the Storage Inventory System</h1>
+
 
 
                 <div class="mt-16">

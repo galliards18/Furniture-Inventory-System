@@ -18,7 +18,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/NSB.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -103,7 +103,7 @@
 
               <p class="text-center">
                 <span>New on our platform?</span>
-                <a href=""><span>Create an account</span></a>
+                <a href="{{ route ('register')}}"><span>Create an account</span></a>
               </p>
             </div>
           </div>
