@@ -6,7 +6,7 @@
         <span class="app-brand-logo demo">
             <img src="">
         </span>
-        <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+        <span class="app-brand-text demo menu-text fw-bolder ms-2">Furniture</span>
     </a>
 
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -26,8 +26,14 @@
         </li>
         <li class="menu-item">
             <a href="{{route('users')}}" class="menu-link">
-            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+            <i class="menu-icon tf-icons bx bx-user-circle"></i>
             <div data-i18n="Analytics">Users</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('furnitures')}}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-cart"></i>
+            <div data-i18n="Analytics">Furniture</div>
             </a>
         </li>
        <!--  <li class="menu-item">

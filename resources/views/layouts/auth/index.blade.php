@@ -52,70 +52,12 @@
   </head>
 
   <body>
+    <!-- Content -->
 
-  <body>
-    <div class="container-xxl">
-      <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner">
-          <div class="card">
-            <div class="card-body">
-              <div class="app-brand justify-content-center">
-              </div>
-              <center><h4 class="mb-2">Welcome to Furniture Inventory System! 👋</h4></center>
-              <p class="mb-4">Please sign-in to your account</p>
+    @include('auth.login')
+    @include('auth.register')
 
-              <!-- Laravel Login Form -->
-              <form id="formAuthentication" class="mb-3" action="{{ route('authenticate') }}" method="POST">
-                @csrf
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input
-                    type="email"
-                    class="form-control @error('email') is-invalid @enderror"
-                    id="email"
-                    name="email"
-                    value="{{ old('email') }}"
-                    placeholder="Enter your email"
-                    autofocus
-                  />
-                  @if ($errors->has('email'))
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                  @endif
-                </div>
-                <div class="mb-3 form-password-toggle">
-                  <div class="d-flex justify-content-between">
-                    <label class="form-label" for="password">Password</label>
-                    <!-- <a href="auth-forgot-password-basic.html"><small>Forgot Password?</small></a> -->
-                  </div>
-                  <div class="input-group input-group-merge">
-                    <input
-                      type="password"
-                      id="password"
-                      class="form-control @error('password') is-invalid @enderror"
-                      name="password"
-                      placeholder="••••••••"
-                      aria-describedby="password"
-                    />
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                  </div>
-                  @if ($errors->has('password'))
-                    <span class="text-danger">{{ $errors->first('password') }}</span>
-                  @endif
-                </div>
-                <div class="mb-3 row">
-                    <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Login">
-                </div>
-              </form>
-
-              <p class="text-center">
-                <span>New on our platform?</span>
-                <a href="{{ route ('register')}}"><span>Create an account</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- / Content -->
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

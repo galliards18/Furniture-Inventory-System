@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Admin\FurnitureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,14 @@ Route::controller(LoginRegisterController::class)->group(function() {
 Route::middleware('auth')->prefix('admin')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('/furnitures', [FurnitureController::class, 'index'])->name('furnitures');
+    Route::resource('admin/furnitures', FurnitureController::class);
+    Route::resource('admin/furnitures', FurnitureController::class);
+    Route::resource('admin/users', UsersController::class);
 });
+
+
+
+
+
+
