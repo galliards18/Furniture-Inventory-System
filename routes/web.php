@@ -34,9 +34,9 @@ Route::middleware('auth')->prefix('admin')->group(function() {
     Route::get('/users', [UsersController::class, 'index'])->name('users');
     Route::get('/furnitures', [FurnitureController::class, 'index'])->name('furnitures');
     Route::resource('admin/furnitures', FurnitureController::class);
-    Route::resource('admin/furnitures', FurnitureController::class);
     Route::resource('admin/users', UsersController::class);
 });
+
 
 
 
