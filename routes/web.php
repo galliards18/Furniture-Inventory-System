@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\FurnitureController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +33,11 @@ Route::controller(LoginRegisterController::class)->group(function() {
 Route::middleware('auth')->prefix('admin')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('/product', [ProductController::class, 'index'])->name('product');
     Route::get('/furnitures', [FurnitureController::class, 'index'])->name('furnitures');
     Route::resource('admin/furnitures', FurnitureController::class);
     Route::resource('admin/users', UsersController::class);
+    Route::resource('admin/product', ProductController::class);
 });
 
 

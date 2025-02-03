@@ -2,16 +2,16 @@
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-    <a href="index.html" class="app-brand-link">
-        <span class="app-brand-logo demo">
-            <img src="">
-        </span>
-        <span class="app-brand-text demo menu-text fw-bolder ms-2">Furniture</span>
-    </a>
+        <a href="#" class="app-brand-link">
+            <span class="app-brand-logo">
+                <img src="{{asset('assets/img/favicon/NSB.png')}}" alt="Brand Logo" style="width: 50px; height: auto;">
+            </span>
+            <span class="app-text demo menu-text fw-bolder ms-2">FURNITURE</span>
+        </a>
 
-    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-        <i class="bx bx-chevron-left bx-sm align-middle"></i>
-    </a>
+        <!-- <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+        </a> -->
     </div>
 
     <div class="menu-inner-shadow"></div>
@@ -34,6 +34,12 @@
             <a href="{{route('furnitures')}}" class="menu-link">
             <i class="menu-icon tf-icons bx bx-cart"></i>
             <div data-i18n="Analytics">Furniture</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('product')}}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-store-alt"></i>
+            <div data-i18n="Analytics">Product</div>
             </a>
         </li>
        <!--  <li class="menu-item">
